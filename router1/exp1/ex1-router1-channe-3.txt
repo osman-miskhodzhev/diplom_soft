@@ -1,0 +1,69 @@
+Connecting to host 192.168.1.101, port 5201
+[  6] local 192.168.1.100 port 57703 connected to 192.168.1.101 port 5201
+[ ID] Interval           Transfer     Bitrate         Total Datagrams
+[  6]   0.00-1.00   sec   127 KBytes  1.04 Mbits/sec  90  
+[  6]   1.00-2.01   sec   130 KBytes  1.05 Mbits/sec  90  
+[  6]   2.01-3.01   sec   128 KBytes  1.05 Mbits/sec  91  
+[  6]   3.01-4.01   sec   127 KBytes  1.05 Mbits/sec  89  
+[  6]   4.01-5.01   sec   130 KBytes  1.06 Mbits/sec  90  
+[  6]   5.01-6.01   sec   125 KBytes  1.03 Mbits/sec  89  
+[  6]   6.01-7.00   sec   128 KBytes  1.06 Mbits/sec  90  
+[  6]   7.00-8.00   sec   128 KBytes  1.05 Mbits/sec  90  
+[  6]   8.00-9.01   sec   128 KBytes  1.04 Mbits/sec  90  
+[  6]   9.01-10.01  sec   130 KBytes  1.06 Mbits/sec  90  
+[  6]  10.01-11.01  sec   125 KBytes  1.03 Mbits/sec  89  
+[  6]  11.01-12.01  sec   128 KBytes  1.05 Mbits/sec  89  
+[  6]  12.01-13.01  sec   130 KBytes  1.06 Mbits/sec  91  
+[  6]  13.01-14.01  sec   127 KBytes  1.04 Mbits/sec  90  
+[  6]  14.01-15.01  sec   127 KBytes  1.04 Mbits/sec  89  
+[  6]  15.01-16.00  sec   128 KBytes  1.05 Mbits/sec  89  
+[  6]  16.00-17.00  sec   128 KBytes  1.05 Mbits/sec  91  
+[  6]  17.00-18.00  sec   127 KBytes  1.04 Mbits/sec  88  
+[  6]  18.00-19.01  sec   130 KBytes  1.05 Mbits/sec  91  
+[  6]  19.01-20.01  sec   128 KBytes  1.05 Mbits/sec  90  
+[  6]  20.01-21.01  sec   130 KBytes  1.06 Mbits/sec  91  
+[  6]  21.01-22.01  sec   125 KBytes  1.03 Mbits/sec  89  
+[  6]  22.01-23.01  sec   128 KBytes  1.05 Mbits/sec  90  
+[  6]  23.01-24.01  sec   128 KBytes  1.05 Mbits/sec  90  
+[  6]  24.01-25.01  sec   128 KBytes  1.05 Mbits/sec  90  
+[  6]  25.01-26.01  sec   128 KBytes  1.06 Mbits/sec  89  
+[  6]  26.01-27.01  sec   127 KBytes  1.04 Mbits/sec  90  
+[  6]  27.01-28.01  sec   127 KBytes  1.04 Mbits/sec  89  
+[  6]  28.01-29.00  sec   130 KBytes  1.06 Mbits/sec  90  
+[  6]  29.00-30.00  sec   127 KBytes  1.04 Mbits/sec  90  
+[  6]  30.00-31.00  sec   127 KBytes  1.04 Mbits/sec  89  
+[  6]  31.00-32.00  sec   128 KBytes  1.05 Mbits/sec  90  
+[  6]  32.00-33.01  sec   130 KBytes  1.05 Mbits/sec  91  
+[  6]  33.01-34.01  sec   130 KBytes  1.07 Mbits/sec  90  
+[  6]  34.01-35.01  sec   125 KBytes  1.03 Mbits/sec  89  
+[  6]  35.01-36.01  sec   128 KBytes  1.05 Mbits/sec  90  
+[  6]  36.01-37.01  sec   127 KBytes  1.04 Mbits/sec  88  
+[  6]  37.01-38.01  sec   128 KBytes  1.05 Mbits/sec  91  
+[  6]  38.01-39.00  sec   128 KBytes  1.06 Mbits/sec  89  
+[  6]  39.00-40.00  sec   127 KBytes  1.04 Mbits/sec  89  
+[  6]  40.00-41.01  sec   131 KBytes  1.06 Mbits/sec  93  
+[  6]  41.01-42.02  sec   127 KBytes  1.04 Mbits/sec  89  
+[  6]  42.02-43.01  sec   128 KBytes  1.05 Mbits/sec  90  
+[  6]  43.01-44.01  sec   127 KBytes  1.04 Mbits/sec  89  
+[  6]  44.01-45.01  sec   128 KBytes  1.05 Mbits/sec  90  
+[  6]  45.01-46.01  sec   127 KBytes  1.04 Mbits/sec  88  
+[  6]  46.01-47.01  sec   128 KBytes  1.05 Mbits/sec  91  
+[  6]  47.01-48.00  sec   128 KBytes  1.05 Mbits/sec  89  
+[  6]  48.00-49.00  sec   128 KBytes  1.05 Mbits/sec  91  
+[  6]  49.00-50.00  sec   127 KBytes  1.04 Mbits/sec  89  
+[  6]  50.00-51.00  sec   128 KBytes  1.05 Mbits/sec  90  
+[  6]  51.00-52.00  sec   128 KBytes  1.05 Mbits/sec  90  
+[  6]  52.00-53.00  sec   127 KBytes  1.04 Mbits/sec  88  
+[  6]  53.00-54.01  sec   130 KBytes  1.06 Mbits/sec  92  
+[  6]  54.01-55.00  sec   127 KBytes  1.04 Mbits/sec  89  
+[  6]  55.00-56.00  sec   128 KBytes  1.06 Mbits/sec  89  
+[  6]  56.00-57.01  sec   128 KBytes  1.04 Mbits/sec  90  
+[  6]  57.01-58.01  sec   128 KBytes  1.05 Mbits/sec  91  
+[  6]  58.01-59.01  sec   127 KBytes  1.04 Mbits/sec  88  
+[  6]  59.01-60.01  sec   130 KBytes  1.06 Mbits/sec  91  
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bitrate         Jitter    Lost/Total Datagrams
+[  6]   0.00-60.01  sec  7.50 MBytes  1.05 Mbits/sec  0.000 ms  0/5387 (0%)  sender
+[  6]   0.00-60.01  sec  7.46 MBytes  1.04 Mbits/sec  1.477 ms  29/5387 (0.54%)  receiver
+
+iperf Done.
