@@ -50,3 +50,33 @@ for ch in range(1, 10):
         change_channel(sub_ch)
         print(f'Комбинация {ch} - {sub_ch}')
         os.system(f'iperf3 -c 192.168.0.101 -t {test_dr} --logfile ex2-router1-channels-{ch}-{sub_ch}.csv')
+
+change_channel(11)
+print(f'Комбинация {10} - {11}')
+os.system(f'iperf3 -c 192.168.0.101 -t {test_dr} --logfile ex2-router1-channels-{10}-{11}.csv')
+
+
+change_channel(12)
+print(f'Комбинация {10} - {12}')
+os.system(f'iperf3 -c 192.168.0.101 -t {test_dr} --logfile ex2-router1-channels-{10}-{12}.csv')
+
+
+change_channel(13)
+print(f'Комбинация {10} - {13}')
+os.system(f'iperf3 -c 192.168.0.101 -t {test_dr} --logfile ex2-router1-channels-{10}-{13}.csv')
+
+
+change_channel(12)
+print(f'Комбинация {11} - {12}')
+os.system(f'iperf3 -c 192.168.0.101 -t {test_dr} --logfile ex2-router1-channels-{11}-{12}.csv')
+
+
+change_channel(13)
+print(f'Комбинация {11} - {13}')
+os.system(f'iperf3 -c 192.168.0.101 -t {test_dr} --logfile ex2-router1-channels-{11}-{13}.csv')
+
+
+change_channel(13)
+print(f'Комбинация {12} - {13}')
+os.system(f'iperf3 -c 192.168.0.101 -t {test_dr} --logfile ex2-router1-channels-{12}-{13}.csv')
+
