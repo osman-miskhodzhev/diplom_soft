@@ -78,7 +78,7 @@ if __name__ == '__main__':
     select = [1535, 972]
 
 
-    router1 = RouterInterfase(name='router', ip_addr='192.168.0.101', ch_list=cors, ch_select=select, ch_save=save)
+    router1 = RouterInterfase(name='router', path='results', ip_addr='192.168.0.101', ch_list=cors, ch_select=select, ch_save=save)
     router1.change_channel(2)
     router1.change_channel(2)
     router1.change_channel(2)
