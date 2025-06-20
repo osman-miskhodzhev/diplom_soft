@@ -16,15 +16,16 @@ def timing_decorator(func):
     return wrapper
 
 class RouterInterfase:
-    def __init__(self, name, ip_addr, ch_list, ch_select, ch_save, pause=5):
+    def __init__(self, name, ip_addr, path, ch_list, ch_select, ch_save, pause=5):
         self.name = name
         self.ip_addr = ip_addr
         self.ch_list = ch_list 
         self.ch_select = ch_select 
         self.ch_save = ch_save 
         self.pause = pause
+        self.path = path
         self.current_ch_num = 0
-        
+
     @timing_decorator
     def change_channel(self, ch_num):
         if self.current_ch_num == ch_num:
@@ -50,7 +51,7 @@ class RouterInterfase:
     @timing_decorator
     def test(self, test_dur=15):
         current_time = datetime.now().strftime("%H-%M-%S")
-        os.system(f'iperf3 -c 192.168.0.101 -t {test_dur} --logfile {self.name}_{current_time}_{self.current_ch_num}.csv')
+        os.system(f'iperf3 -c 192.168.0.101 -t {test_dur} --logfile {self.path}/{self.name}_{current_time}_{self.current_ch_num}.csv')
         print(f'Тестирование на {self.current_ch_num} прошло')
 
 

@@ -28,6 +28,7 @@ select = [1535, 972]
 router1 = RouterInterfase(
     name='router_1',
     ip_addr='192.168.0.100',
+    path='experiment_2/results',
     ch_list=cors,
     ch_select=select,
     ch_save=save
