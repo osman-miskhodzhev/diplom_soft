@@ -1,8 +1,8 @@
-from router_managment.core import RouterInterfase
-
 import os
 import time
 import pyautogui
+
+from router_managment.core import RouterInterfase
 
 cors = [
     '',
@@ -25,9 +25,16 @@ save = [1684, 1169]
 select = [1535, 972]
 
 router1 = RouterInterfase(
+    name='router_1',
+    ip_addr='192.168.0.100',
     ch_list=cors,
     ch_select=select,
     ch_save=save
 )
 
-router1.change_channel(1)
+"""
+На втором роутере всегда канал номер 1, тестирование проводится с интервалом в 5 сек
+"""
+for x in range(2, 14):
+    time.sleep(5.1)
+    router1.test()

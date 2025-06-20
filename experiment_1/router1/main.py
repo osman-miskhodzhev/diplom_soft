@@ -1,8 +1,8 @@
-from router_managment.core import RouterInterfase
-
 import os
 import time
 import pyautogui
+
+from router_managment.core import RouterInterfase
 
 cors = [
     '',
@@ -32,5 +32,9 @@ router1 = RouterInterfase(
     ch_save=save
 )
 
-router1.change_channel(1)
-router1.test(test_dur=1)
+"""
+На первом роутере поочередно меняю канал от 2 до 13 и провожу тестирование
+"""
+for x in range(2, 14):
+    router1.change_channel(x)
+    router1.test()
