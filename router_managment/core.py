@@ -14,12 +14,15 @@ class RouterInterfase:
         self.current_ch_num = 1
     
     def change_channel(self, ch_num):
-        pyautogui.moveTo(self.ch_select)
-        pyautogui.leftClick()
-        pyautogui.moveTo(self.ch_list[ch_num])
-        pyautogui.leftClick()
-        pyautogui.moveTo(self.ch_save)
-        pyautogui.leftClick()
+        if self.current_ch_num == ch_num:
+            print(f'Номер канала сейчас - {self.current_ch_num}')
+        else:
+            pyautogui.moveTo(self.ch_select)
+            pyautogui.leftClick()
+            pyautogui.moveTo(self.ch_list[ch_num])
+            pyautogui.leftClick()
+            pyautogui.moveTo(self.ch_save)
+            pyautogui.leftClick()
         time.sleep(self.pause)
         self.current_ch_num = ch_num
         print(f'Канал изменен на {ch_num}')
@@ -32,7 +35,7 @@ class RouterInterfase:
             self.change_channel(self.current_ch_num + 1)
     
     def test(self, test_dur=15):
-        current_time = datetime.now().strftime('%H-%M')
+        current_time = datetime.now().strftime("%H-%M-%S")
         os.system(f'iperf3 -c 192.168.0.101 -t {test_dur} --logfile {self.name}_{current_time}_{self.current_ch_num}.csv')
         print(f'Тестирование на {self.current_ch_num} прошло')
 
@@ -59,6 +62,9 @@ if __name__ == '__main__':
     select = [1535, 972]
 
 
-    router1 = RouterInterfase(ch_list=cors, ch_select=select, ch_save=save)
+    router1 = RouterInterfase(name='router', ip_addr='192.168.0.101', ch_list=cors, ch_select=select, ch_save=save)
+    router1.change_channel(2)
+    router1.change_channel(2)
+    router1.change_channel(2)
     router1.change_channel(2)
 
