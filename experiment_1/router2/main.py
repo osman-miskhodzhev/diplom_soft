@@ -30,4 +30,4 @@ router1 = RouterInterfase(
     ch_save=save
 )
 
-router1.change_channel(2)
+router1.change_channel(1)

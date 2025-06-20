@@ -1,9 +1,12 @@
 import os
 import time
 import pyautogui
+from datetime import datetime
 
 class RouterInterfase:
-    def __init__(self, ch_list, ch_select, ch_save, pause=5):
+    def __init__(self, name, ip_addr, ch_list, ch_select, ch_save, pause=5):
+        self.name = name
+        self.ip_addr = ip_addr
         self.ch_list = ch_list 
         self.ch_select = ch_select 
         self.ch_save = ch_save 
@@ -27,6 +30,11 @@ class RouterInterfase:
             self.change_channel(1)
         else:
             self.change_channel(self.current_ch_num + 1)
+    
+    def test(self, test_dur=15):
+        current_time = datetime.now().strftime('%H-%M')
+        os.system(f'iperf3 -c 192.168.0.101 -t {test_dur} --logfile {self.name}_{current_time}_{self.current_ch_num}.csv')
+        print(f'Тестирование на {self.current_ch_num} прошло')
 
 
 if __name__ == '__main__':
@@ -53,3 +61,4 @@ if __name__ == '__main__':
 
     router1 = RouterInterfase(ch_list=cors, ch_select=select, ch_save=save)
     router1.change_channel(2)
+
