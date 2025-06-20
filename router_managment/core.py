@@ -2,6 +2,18 @@ import os
 import time
 import pyautogui
 from datetime import datetime
+from functools import wraps
+
+def timing_decorator(func):
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        start_time = time.time()  # Засекаем время
+        result = func(*args, **kwargs)
+        end_time = time.time()    # Засекаем после выполнения
+        duration = end_time - start_time
+        print(f"Функция '{func.__name__}' выполнена за {duration:.4f} секунд(ы)")
+        return result
+    return wrapper
 
 class RouterInterfase:
     def __init__(self, name, ip_addr, ch_list, ch_select, ch_save, pause=5):
@@ -12,7 +24,8 @@ class RouterInterfase:
         self.ch_save = ch_save 
         self.pause = pause
         self.current_ch_num = 0
-    
+        
+    @timing_decorator
     def change_channel(self, ch_num):
         if self.current_ch_num == ch_num:
             print(f'Номер канала сейчас - {self.current_ch_num}')
@@ -33,7 +46,8 @@ class RouterInterfase:
             self.change_channel(1)
         else:
             self.change_channel(self.current_ch_num + 1)
-    
+
+    @timing_decorator
     def test(self, test_dur=15):
         current_time = datetime.now().strftime("%H-%M-%S")
         os.system(f'iperf3 -c 192.168.0.101 -t {test_dur} --logfile {self.name}_{current_time}_{self.current_ch_num}.csv')

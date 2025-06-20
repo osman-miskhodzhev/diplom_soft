@@ -2,6 +2,7 @@ import os
 import time
 import pyautogui
 
+
 from router_managment.core import RouterInterfase
 
 cors = [
@@ -66,5 +67,6 @@ for i in range(1, 13):
     else:
         max_j = 13
     for j in range(i + 1, max_j + 1):
-        print(i)
+        router1.change_channel(i)
+        router1.test()
 
