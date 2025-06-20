@@ -30,6 +30,7 @@ class RouterInterfase:
     def change_channel(self, ch_num):
         if self.current_ch_num == ch_num:
             print(f'Номер канала сейчас - {self.current_ch_num}')
+            time.sleep(self.pause)
         else:
             pyautogui.moveTo(self.ch_select)
             pyautogui.leftClick()
@@ -37,7 +38,7 @@ class RouterInterfase:
             pyautogui.leftClick()
             pyautogui.moveTo(self.ch_save)
             pyautogui.leftClick()
-        time.sleep(self.pause)
+            time.sleep(self.pause-0.9)
         self.current_ch_num = ch_num
         print(f'Канал изменен на {ch_num}')
 
