@@ -11,7 +11,7 @@ class RouterInterfase:
         self.ch_select = ch_select 
         self.ch_save = ch_save 
         self.pause = pause
-        self.current_ch_num = 1
+        self.current_ch_num = 0
     
     def change_channel(self, ch_num):
         if self.current_ch_num == ch_num:

@@ -36,5 +36,5 @@ router1 = RouterInterfase(
 На втором роутере всегда канал номер 1, тестирование проводится с интервалом в 5 сек
 """
 for x in range(2, 14):
-    time.sleep(5.1)
+    router1.change_channel(1)
     router1.test()
