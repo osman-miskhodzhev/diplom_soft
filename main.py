@@ -23,21 +23,24 @@ cors = [
 save = [1684, 1169]
 
 select = [1535, 972]
-
-router1 = RouterInterfase(
+router = RouterInterfase(
     name='router_1',
-    ip_addr='192.168.0.101',
-    path='experiment_1/results',
+    ip_addr='192.168.0.103',
+    path='results',
     ch_list=cors,
     ch_select=select,
     ch_save=save,
     pause=0.9
 )
 
-"""
-На первом роутере поочередно меняю канал от 2 до 13 и провожу тестирование
-"""
-bad_list = [1, 2, 5, 7, 9, 11, 13]
-for x in bad_list:
-    router1.change_channel(x)
-    router1.test(test_dur=10)
+# while True:
+#     ch_number = int(input('Номер канала >>> '))
+#     router.change_channel(ch_num=ch_number)
+
+e1_r1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+for x in e1_r1:
+    comand = input('>>> ')
+    if comand == 'n':
+        router.change_channel(ch_num=x)
+    elif comand == 't':
+        router.test(test_dur=10)

@@ -3,6 +3,7 @@ import time
 import pyautogui
 from datetime import datetime
 from functools import wraps
+from typing import List, Dict
 
 def timing_decorator(func):
     @wraps(func)
@@ -16,7 +17,16 @@ def timing_decorator(func):
     return wrapper
 
 class RouterInterfase:
-    def __init__(self, name, ip_addr, path, ch_list, ch_select, ch_save, pause=5):
+    def __init__(
+            self,
+            name: str,
+            ip_addr: str,
+            path: str,
+            ch_list: List[list[int]],
+            ch_select: List[int],
+            ch_save: List[int],
+            pause: float=5
+        ):
         self.name = name
         self.ip_addr = ip_addr
         self.ch_list = ch_list 
@@ -52,7 +62,7 @@ class RouterInterfase:
     @timing_decorator
     def test(self, test_dur=15):
         current_time = datetime.now().strftime("%H-%M-%S")
-        os.system(f'iperf3 -c 192.168.0.101 -t {test_dur} --logfile {self.path}/{self.name}_{current_time}_{self.current_ch_num}.csv')
+        os.system(f'iperf3 -c {self.ip_addr} -t {test_dur} --logfile {self.path}/{self.current_ch_num}.csv')
         print(f'Тестирование на {self.current_ch_num} прошло')
 
 
@@ -78,9 +88,17 @@ if __name__ == '__main__':
     select = [1535, 972]
 
 
-    router1 = RouterInterfase(name='router', path='results', ip_addr='192.168.0.101', ch_list=cors, ch_select=select, ch_save=save)
-    router1.change_channel(2)
-    router1.change_channel(2)
-    router1.change_channel(2)
-    router1.change_channel(2)
+    router1 = RouterInterfase(
+        name='router',
+        path='results',
+        ip_addr='192.168.0.101',
+        ch_list=cors,
+        ch_select=select,
+        ch_save=save,
+        pause=0.9
+    )
+    for x in range(1, 14):
+        router1.change_channel(x)
+        router1.test(test_dur=10)
+        input()
 
